@@ -1,0 +1,42 @@
+<div style="margin-left: 9%;">
+    <h1>Quizzes for Project: {{site_id}}</h1>
+</div>
+
+<div class="alert alert-success" *ngIf='msg'>{{msg}}</div>
+
+<div class="container">
+<table class="table">
+    <thead>
+    <tr>
+        <th>No.</th>
+        <th>Description</th>
+        <!-- <th>Option1</th>
+        <th>Option2</th>
+        <th>Option3</th>
+        <th>Option4</th>
+        <th>Answer Index</th>
+        <th>Explanation</th> -->
+        <th>Update</th>
+        <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let quiz of quizzes; let i = index" [attr.data-index]="i">
+        <td>{{ i + 1 }}</td>
+        <td>{{ quiz.description }}</td>
+        <!-- <td>{{ quiz.option1 }}</td>
+        <td>{{ quiz.option2 }}</td>
+        <td>{{ quiz.option3 }}</td>
+        <td>{{ quiz.option4 }}</td>
+        <td>{{ quiz.ans_idx }}</td>
+        <td>{{ quiz.ans_exp }}</td> -->
+        <td><button (click)="updateQuiz(quiz.id)" class="btn btn-info">Update</button></td>
+        <td><button (click)="deleteQuiz(quiz.id)" class="btn btn-danger">Delete</button></td>
+    </tr>
+    </tbody>
+</table>
+<div class="row">
+    <button (click)="backAdminQuizControl()" class="btn btn-secondary">Back</button>
+    <button (click)="addQuiz()" class="btn btn-success ml-2">Add</button>
+</div>
+</div>

@@ -1,0 +1,81 @@
+
+<!--Main Navigation-->
+<header class="intro-header">
+
+
+<!--  Intro Section-->
+  <section class="view intro-2">
+    <div class="alert alert-warning" *ngIf="invalidLogin">{{ errorMessage }}</div>
+    <div class="full-bg-img mask rgba-gradient">
+      <div class="container" style="margin-top: 12%">
+        <div class="d-flex align-items-center content-height w-100">
+<!--          <div class="row flex-center pt-5 mt-3 w-100">-->
+            <div class="col-md-6 text-center text-md-left mb-5">
+              <div class="text-black-50">
+                <h2 class="h1 h1-responsive font-bold wow fadeInLeft" data-wow-delay="0.3s">Clinical Trials at Duke</h2>
+                <hr class="hr-dark wow fadeInLeft" data-wow-delay="0.3s">
+                <h6 class="wow fadeInLeft" data-wow-delay="0.3s">Clinical research has led to the development of new drugs,
+                  new surgical procedures and devices, and new behaviors designed to advance the public's health. It has also
+                  helped doctors discover new ways to identify people at risk for and help prevent or delay certain diseases.
+                  Many of these medical advances occurred because people volunteered to participate in clinical trials and other
+                  types of clinical research.</h6>
+                <br>
+                <a mdbBtn color="black" outline="true" class="wow fadeInLeft waves-light" data-wow-delay="0.3s"
+                   mdbWavesEffect href="https://www.dukehealth.org/clinical-trials">Learn more</a>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-xl-5 offset-xl-1">
+              <!--Form-->
+              <mdb-card class="wow fadeInRight" data-wow-delay="0.3s">
+                <mdb-card-body>
+                  <!--Header-->
+                  <div class="text-center">
+                    <h3 class="text-black-50">
+                      <mdb-icon fas icon="user" class="text-black-50"></mdb-icon> Log In</h3>
+                    <hr class="hr-dark">
+                  </div>
+                  <!--Body-->
+                  <div class="md-form">
+                    <mdb-icon fas icon="user" class="text-black-50 active"></mdb-icon>
+                    <input type="text" id="form3" class="text-black-50 form-control" mdbInput [(ngModel)]="first_name">
+<!--                    <input type="text" class="form-control" name="first_name" />-->
+                    <label for="form3" class="text-black-50">First Name</label>
+                  </div>
+                  <div class="md-form">
+                    <mdb-icon fas icon="user" class="text-black-50 active"></mdb-icon>
+                    <input type="email" id="form2" class="text-black-50 form-control" mdbInput [(ngModel)]="last_name">
+                    <label for="form2" class="text-black-50">Last Name</label>
+                  </div>
+                  <div class="md-form">
+                    <mdb-icon fas icon="lock" class="text-black-50 active"></mdb-icon>
+                    <input type="password" id="form4" class="text-black-50 form-control" mdbInput [(ngModel)]="password" >
+                    <label for="form4" class="text-black-50">Password</label>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button (click)="handleLogin()" mdbBtn color="grey" mdbWavesEffect>Login</button>
+                    <hr class="hr-dark mb-3 mt-4">
+<!--                    <div class="inline-ul text-center d-flex justify-content-center">-->
+<!--                      <a class="p-2 m-2 tw-ic">-->
+<!--                        <mdb-icon fab icon="twitter" class="text-white"></mdb-icon>-->
+<!--                      </a>-->
+<!--                      <a class="p-2 m-2 li-ic">-->
+<!--                        <mdb-icon fab icon="linkedin-in" class="text-white"></mdb-icon>-->
+<!--                      </a>-->
+<!--                      <a class="p-2 m-2 ins-ic">-->
+<!--                        <mdb-icon fab icon="instagram" class="text-white"></mdb-icon>-->
+<!--                      </a>-->
+<!--                    </div>-->
+                  </div>
+                </mdb-card-body>
+              </mdb-card>
+              <!--/.Form-->
+            </div>
+<!--          </div>-->
+        </div>
+      </div>
+    </div>
+  </section>
+
+</header>
+<!--Main Navigation-->

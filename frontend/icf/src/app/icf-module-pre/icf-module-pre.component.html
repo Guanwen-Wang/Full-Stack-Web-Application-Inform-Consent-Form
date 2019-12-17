@@ -1,0 +1,17 @@
+
+<section class="view intro-2" >
+  <div class="container" style="margin-top: 5%">
+    <h3><b>Inform Consent Form</b></h3>
+    <br>
+    <h6>You will be guided to the following sections.</h6>
+    <h6>After reading, you will be asked to answer a set of questions to make sure you understand.</h6>
+    <div style="margin-top: 20px"></div>
+    <ul class="list-group list-group-flush" style="opacity: 0.7" *ngFor="let title of projectDetailTitles; let i = index" [attr.data-index]="i">
+      <li class="list-group-item" style="padding-top: 20px"><h4>{{i + 1}}. {{title}}</h4></li>
+    </ul>
+  </div>
+  <div class="mt-2 container" style="margin-top: 20px">
+<!--    <button (click)="backEduModule()" class="btn btn-secondary" style="width: 150px">Back</button>-->
+    <button (click)="goIcfModule()" class="btn btn-success" style="float: right; width: 150px">Start</button>
+  </div>
+</section>

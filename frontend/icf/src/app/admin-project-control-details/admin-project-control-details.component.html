@@ -1,0 +1,32 @@
+<div style="margin-left: 9%;">
+    <h1>Project Details</h1>
+  </div>
+
+  <div class="alert alert-success" *ngIf='msg'>{{msg}}</div>
+
+  <div class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Content</th>
+          <th>Update</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let project_detail of project_details">
+          <td>{{ project_detail.id }}</td>
+          <td>{{ project_detail.title }}</td>
+          <td>{{ project_detail.content }}</td>
+          <td><button (click)="updateProjectDetail(project_detail.id)" class="btn btn-info">Update</button></td>
+          <td><button (click)="deleteProjectDetail(project_detail.id)" class="btn btn-danger">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="row">
+      <button (click)="backAdminProjectControl()" class="btn btn-secondary">Back</button>
+      <button (click)="addProjectDetail()" class="btn btn-success ml-2">Add</button>
+    </div>
+  </div>

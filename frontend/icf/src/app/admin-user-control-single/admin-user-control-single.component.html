@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="alert alert-warning mt-3" *ngIf="userForm.dirty && userForm.invalid">Please Enter Valid Values!</div>
+    <form (ngSubmit)="!userForm.invalid && saveUser()" #userForm="ngForm" style="margin-top: 20px">
+        <fieldset class="form-group">
+            <label>First Name</label>
+            <input type="text" [(ngModel)]="user.first_name" class="form-control" name="first_name" required="required">
+        </fieldset>
+
+        <fieldset class="form-group">
+            <label>Last Name</label>
+            <input type="text" [(ngModel)]="user.last_name" class="form-control" name="last_name" required="required">
+        </fieldset>
+
+        <fieldset class="form-group">
+            <label>Password</label>
+            <input type="text" [(ngModel)]="user.password" class="form-control" name="password" required="required">
+        </fieldset>
+
+        <fieldset class="form-group">
+            <label>Unique ID</label>
+            <input type="text" [(ngModel)]="user.unique_id" class="form-control" name="unique_id" required="required">
+        </fieldset>
+
+        <fieldset>
+            <input type="checkbox" [(ngModel)]="user.is_admin" name="is_admin">
+            <label class="ml-2">Does this user has the privilege of Admin?</label>
+        </fieldset>
+
+        <button (click)="backUserControl()" class="btn btn-secondary" style="margin-top: 10px; width: 150px">Back</button>
+        <button type="submit" class="btn btn-success ml-2" style="margin-top: 10px; width: 150px">Save</button>
+    </form>
+</div>

@@ -1,0 +1,21 @@
+textarea {
+    /*border: 1px solid black;*/
+    width: auto;
+    height: auto;
+    font-size: 18px;
+    /*font: 20px "Timess New Roman", Times, serif;*/
+}
+
+.intro-2 {
+  background: url("../../assets/img/blue-stetoscope.jpg");
+  background-size: cover;
+}
+.view {
+  height: 100vh !important;
+}
+
+.education-box {
+  margin-top: 2%;
+  padding-top: 2%;
+  opacity: 0.9;
+}

@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="alert alert-warning mt-3" *ngIf="projectDetailForm.dirty && projectDetailForm.invalid">Please Enter Valid Values!</div>
+    <form (ngSubmit)="!projectDetailForm.invalid && saveProjectDetail()" #projectDetailForm="ngForm">
+        <fieldset class="form-group">
+            <label>Title</label>
+            <input type="text" [(ngModel)]="project_detail.title" class="form-control" name="title" required="required">
+        </fieldset>
+
+        <fieldset class="form-group">
+            <label>Content</label>
+            <textarea id="text" [(ngModel)]="project_detail.content" class="form-control" name="content" rows="17" cols="100" required="required">
+            </textarea>
+        </fieldset>
+
+        <button (click)="backProjectControlDetails()" class="btn btn-secondary">Back</button>
+        <button type="submit" class="btn btn-success ml-2">Save</button>
+    </form>
+</div>

@@ -1,0 +1,13 @@
+.intro-2 {
+  background: url("../../assets/img/blue-stetoscope.jpg");
+  background-size: cover;
+}
+.view {
+  height: 100vh !important;
+}
+
+.button-box {
+  position: relative;
+  margin-top: 20px;
+  width: 250px;
+}

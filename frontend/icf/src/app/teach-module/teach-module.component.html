@@ -1,0 +1,59 @@
+
+
+<section class="view intro-2">
+  <div class="jumbotron container confirm-box">
+<!--    <p>Questions add progress bar</p>-->
+    <div class="progress">
+      <div class="progress-bar" role="progressbar" [style.width]="progressBarWidth + '%'" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    <div class="container card" style="background-color: lightgrey; margin-top: 10px">
+      <div class="card-body" >
+
+
+<!--        <div class="card bg-info">-->
+          <div *ngIf="loaded" class="card-body">
+            <div class="card-title">
+              Question {{progress + 1}}
+            </div>
+            <div class="card-text">
+              <div class="mb-2" style="color: black">
+                {{quizzes[progress].description}}
+              </div>
+              <!-- <ul class="list-group">
+                  <ng-container *ngFor="let i = index; let option of quizs[progress].options">
+                      <li type="button" (click)="Answer(i)" class="btn list-group-item list-group-item-info">
+                          {{option}}
+                      </li>
+                  </ng-container>
+              </ul> -->
+              <div>
+                <div class="custom-control custom-radio mt-1">
+                  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadio1" style="color: black">{{quizzes[progress].option1}}</label>
+                </div>
+                <div class="custom-control custom-radio mt-1">
+                  <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadio2" style="color: black">{{quizzes[progress].option2}}</label>
+                </div>
+                <div class="custom-control custom-radio mt-1">
+                  <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadio3" style="color: black">{{quizzes[progress].option3}}</label>
+                </div>
+<!--                <div class="custom-control custom-radio mt-1">-->
+<!--                  <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input">-->
+<!--                  <label class="custom-control-label" for="customRadio4">{{quizzes[progress].option4}}</label>-->
+<!--                </div>-->
+              </div>
+              <div class="mt-2">
+                <button (click)="Submit()" class="btn btn-success mr-2">Submit Answer</button>
+              </div>
+              <div id="disp" class="mt-2" style="color: black; opacity: 1;"></div>
+            </div>
+          </div>
+<!--        </div>-->
+
+      </div>
+    </div>
+
+  </div>
+</section>

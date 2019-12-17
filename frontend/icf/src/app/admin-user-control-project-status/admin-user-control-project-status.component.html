@@ -1,0 +1,40 @@
+<div style="margin-left: 7%;">
+    <h1>Project Status of {{fullname}} (unique_id: {{user.unique_id}})</h1>
+  </div>
+
+  <div class="alert alert-success" *ngIf='msg'>{{msg}}</div>
+
+  <div class="container-fluid" style="margin-left: 20px; margin-right: 20px">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Project ID</th>
+          <th>Project Name</th>
+          <th>Project SiteID</th>
+          <th>Completed?</th>
+          <th>Signed?</th>
+          <th>Edu Time</th>
+          <th>ICF Time</th>
+          <th>Teachback Time</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let userProject of userProjects; let i = index" [attr.data-index]="i">
+          <td>{{ userProject.pid }}</td>
+          <td>{{ projects[i].name }}</td>
+          <td>{{ projects[i].site_id }}</td>
+          <td>{{ userProject.is_completed }}</td>
+          <td>{{ userProject.is_signed }}</td>
+          <td>{{ getEduTime(userProject) }}</td>
+          <td>{{ getIcfTime(userProject) }}</td>
+          <td>{{ getTeachbackTime(userProject) }}</td>
+          <td><button (click)="deleteUserProject(userProject.id)" class="btn btn-danger">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="row">
+      <button (click)="backUserControl()" class="btn btn-secondary">Back</button>
+      <button (click)="addUserProject()" class="btn btn-success ml-2">Add</button>
+    </div>
+  </div>

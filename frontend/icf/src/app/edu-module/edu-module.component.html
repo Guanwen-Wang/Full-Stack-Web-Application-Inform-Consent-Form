@@ -1,0 +1,61 @@
+<section class="view intro-2">
+  <div class="jumbotron container education-box">
+    <h4><b>Background Knowledge Education</b></h4>
+    <div class="mt-2">
+    <select id="voice-names" ></select>
+      <span style="margin-left: 5%">
+       <input class="custom-range" style="width: 150px; padding-top: 10px" id="rate" type="range" min="0.5" max="2" step="0.25" value="{{speakSpeed}}" [(ngModel)]="speakSpeed">
+      </span>
+      <span style="margin-left: 2%"> Speed: {{speakSpeed}}</span>
+      <span style="float: right">
+        Status: {{speakStatus}}
+      </span>
+
+    </div>
+    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" style="margin-top: 10px">
+      <!-- <button *ngIf="speakStatus === 'Not Speaking' || speakStatus === 'Cancelled'" (click)="speakClicked()" id="speak-btn" class="btn btn-primary mr-2">speak</button>
+      FIXME: not sure why speechsynthesis doesn't work when ngif added -->
+
+      <div class="btn-group mr-2" role="group" aria-label="First group">
+        <button mdbBtn type="button" color="default" class="waves-light" mdbWavesEffect (click)="speakClicked()" id="speak-btn" >Speak</button>
+        <button mdbBtn type="button" color="default" class="waves-light" mdbWavesEffect (click)="pauseClicked()" id="pause-btn">Pause</button>
+        <button mdbBtn type="button" color="default" class="waves-light" mdbWavesEffect (click)="resumeClicked()" id="resume-btn">Resume</button>
+        <button mdbBtn type="button" color="default" class="waves-light" mdbWavesEffect (click)="cancelClicked()" id="cancel-btn">Cancel</button>
+      </div>
+    </div>
+
+    <div class="container card" style="background-color: lightgrey; margin-top: 10px">
+
+        <textarea id="text" rows="15" cols="100" readonly class="card-body" style="background-color: lightgray; border: lightgray">
+1. What is a Clinical Trial?
+
+A clinical study involves research using human volunteers (also called participants) that is intended to add to medical knowledge. There are two main types of clinical studies: clinical trials (also called interventional studies) and observational studies.
+
+In a clinical trial, participants receive specific interventions according to the research plan or protocol created by the investigators. These interventions may be medical products, such as drugs or devices; procedures; or changes to participants' behavior, such as diet. Clinical trials may compare a new medical approach to a standard one that is already available, to a placebo that contains no active ingredients, or to no intervention. Some clinical trials compare interventions that are already available to each other. When a new product or approach is being studied, it is not usually known whether it will be helpful, harmful, or no different than available alternatives (including no intervention). The investigators try to determine the safety and efficacy of the intervention by measuring certain outcomes in the participants. For example, investigators may give a drug or treatment to participants who have high blood pressure to see whether their blood pressure decreases.
+
+2. Who Can Participate in a Clinical Study?
+
+Clinical studies have standards outlining who can participate. These standards are called eligibility criteria and are listed in the protocol. Some research studies seek participants who have the illnesses or conditions that will be studied, other studies are looking for healthy participants, and some studies are limited to a predetermined group of people who are asked by researchers to enroll.
+
+Eligibility. The factors that allow someone to participate in a clinical study are called inclusion criteria, and the factors that disqualify someone from participating are called exclusion criteria. They are based on characteristics such as age, gender, the type and stage of a disease, previous treatment history, and other medical conditions.
+
+3. How Are Participants Protected?
+
+Informed consent is a process used by researchers to provide potential and enrolled participants with information about a clinical study. This information helps people decide whether they want to enroll or continue to participate in the study. The informed consent process is intended to protect participants and should provide enough information for a person to understand the risks of, potential benefits of, and alternatives to the study. In general, a person must sign an informed consent document before joining a study to show that he or she was given information on the risks, potential benefits, and alternatives and that he or she understands it. Signing the document and providing consent is not a contract. Participants may withdraw from a study at any time, even if the study is not over.
+
+Institutional review boards. Each federally supported or conducted clinical study and each study of a drug, biological product, or medical device regulated by FDA must be reviewed, approved, and monitored by an institutional review board (IRB). An IRB is made up of doctors, researchers, and members of the community. Its role is to make sure that the study is ethical and that the rights and welfare of participants are protected. This includes making sure that research risks are minimized and are reasonable in relation to any potential benefits, among other responsibilities. The IRB also reviews the informed consent document.
+
+4. What are the Considerations for Participation?
+
+Participating in a clinical study contributes to medical knowledge. The results of these studies can make a difference in the care of future patients by providing information about the benefits and risks of therapeutic, preventative, or diagnostic products or interventions. Clinical trials provide the basis for the development and marketing of new drugs, biological products, and medical devices. Sometimes, the safety and the effectiveness of the experimental approach or use may not be fully known at the time of the trial. Some trials may provide participants with the prospect of receiving direct medical benefits, while others do not. Most trials involve some risk of harm or injury to the participant, although it may not be greater than the risks related to routine medical care or disease progression.
+
+        </textarea>
+      </div>
+
+    <div class="mt-2">
+<!--      <button (click)="backYourProject()" class="btn btn-secondary mr-2">Back</button>-->
+      <button (click)="goIcfModulePre()" class="btn btn-success" style="float: right">Next</button>
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,17 @@
+<div class="container" style="margin-top: 20px">
+    <div class="alert alert-warning mt-3" *ngIf="projectForm.dirty && projectForm.invalid">Please Enter Valid Values!</div>
+    <form (ngSubmit)="!projectForm.invalid && saveProject()" #projectForm="ngForm">
+        <fieldset class="form-group">
+            <label>Site ID</label>
+            <input type="text" [(ngModel)]="project.site_id" class="form-control" name="site_id" required="required">
+        </fieldset>
+
+        <fieldset class="form-group">
+            <label>Name</label>
+            <input type="text" [(ngModel)]="project.name" class="form-control" name="name" required="required">
+        </fieldset>
+
+        <button (click)="backProjectControl()" class="btn btn-secondary" style="margin-top: 10px; width: 100px">Back</button>
+        <button type="submit" class="btn btn-success ml-2" style="margin-top: 10px; width: 100px">Save</button>
+    </form>
+</div>

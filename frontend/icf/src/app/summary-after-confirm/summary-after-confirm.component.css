@@ -1,0 +1,11 @@
+.intro-2 {
+  background: url("../../assets/img/blue-stetoscope.jpg");
+  background-size: cover;
+}
+.view {
+  height: 100vh !important;
+}
+.confirm-box {
+  margin-top: 5%;
+  opacity: 0.85;
+}
